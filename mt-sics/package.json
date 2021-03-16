@@ -1,0 +1,17 @@
+{
+  "name": "MettlerToledo",
+  "version": "1.0.0",
+  "description": "Serial interface for Mettler Toledo scale MT-SICS protocol",
+  "main": "scale.js",
+  "scripts": {
+    "start": "node scale.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J. Wiesler",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^4.2.5",
+    "serialport": "^9.0.2",
+    "sparkplug-client": "^3.2.2"
+  }
+}
