@@ -2,6 +2,7 @@
 
 # Environment variables
 export TTY='/dev/ttyUSB0'
+export BAUDRATE=9600
 export METER_POLL_MS=250
 
 export MQTT_EDGE_NODE_ID="TEST002"

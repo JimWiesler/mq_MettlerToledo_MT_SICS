@@ -9,6 +9,7 @@ const hostname = os.hostname();
 //*****************************
 // Environment variables
 // TTY: '/dev/ttyUSB0'
+// BAUDRATE: 38400
 // METER_POLL_MS: 250 range 200-5000
 // MQTT_EDGE_NODE_ID: hostname
 // MQTT_DEVICE_ID: 'WT9999X'
@@ -32,7 +33,7 @@ let spkplgClient = null;
 // Set up the Mettler Toledo scale object
 const scale = new MettlerToledo({
     tty: (process.env.TTY || '/dev/ttyUSB0'),
-    baudrate: 38400,
+    baudrate: constrainInt(process.env.BAUDRATE, 38400, 1200, 115200),
     cmdTimeout: 500,
     measPollMS: constrainInt(process.env.METER_POLL_MS, 250, 200, 5000),
     alivePollMS: 1000,
